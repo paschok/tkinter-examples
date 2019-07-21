@@ -1,6 +1,6 @@
 from tkinter import *
 import requests
-
+from tkinter import font
 
 def getWeather(city):
     print('This is our entry: ', city)
@@ -27,6 +27,7 @@ def display_current_weather(weather):
 
     return final_output
 
+
 root = Tk()
 
 canvas = Canvas(root, height=500, width=600)
@@ -39,19 +40,18 @@ bg_label.place(relwidth=1, relheight=1)
 frame = Frame(root, bg='#80c1ff', bd=5)
 frame.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.1, anchor=N)
 
-entry = Entry(frame, font=40)
+entry = Entry(frame, font=('MS UI Gothic', 20))
 entry.place(relwidth=0.6, relheight=1)
 
-button = Button(frame, text='get weather', font=40,
+button = Button(frame, text='Get weather', font=('MS UI Gothic', 15),
                 command=lambda: getWeather(entry.get()))
 button.place(relx=0.7, rely=0, relwidth=0.3, relheight=1)
 
 weather_frame = Frame(root, bg='#80c1ff', bd=10)
 weather_frame.place(relx=0.5, rely=0.25, relwidth=0.75, relheight=0.6, anchor=N)
 
-label = Label(weather_frame, font=30)
+label = Label(weather_frame, font=('MS UI Gothic', 20), anchor=NW, justify=LEFT, bd=5)
 label.place(relwidth=1, relheight=1)
-
 
 root.mainloop()
 
