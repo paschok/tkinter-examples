@@ -1,6 +1,6 @@
 from tkinter import *
 import requests
-from tkinter import font
+
 
 def getWeather(city):
     print('This is our entry: ', city)
@@ -29,7 +29,7 @@ def display_current_weather(weather):
 
 
 root = Tk()
-
+root.title('Weather App')
 canvas = Canvas(root, height=500, width=600)
 canvas.pack()
 
